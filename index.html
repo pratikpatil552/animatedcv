@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor">
+        
+    </div>
+    <header id = "Know">
+        <nav>
+            <h1>Pratik</h1>
+            <ul>
+                <li>Profile</li>
+                <li>Projects</li>
+                <li>College</li>
+            </ul>
+            <a href="">GET IN TOUCH</a>
+        </nav>
+        <div class = "hero">
+            
+        </div>
+    </header>
+    <section>
+        <img src="images/bg.jpg" alt="" id="bg">
+        <div class="logo">
+            <h1 id="text">Pratik</h1>
+        </div>
+        <img src="images/man.png" alt="" id="man">
+        <img src="images/lens.png" alt="" id="lens">
+    </section> 
+    <div class="main-container">
+        <h1 id="pratik" >Pratik Patil</h1>
+        <div class="main-container-wrapper">
+            <div class="left-col">
+
+            </div>
+            <div class="right-col">
+                <h3>Profile links</h3>
+                <a class = "links" href="https://codeforces.com/profile/andyp3"><img src="images/codeforces.png" alt="">Andyp3</a>
+                <a class = "links" href=""><img src="images/codechef.png" alt="">parag_3</a>
+            </div>
+        </div>
+    </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+    <script>
+      gsap.to("#bg",{
+            scrollTrigger : {
+                scrub : 1
+            },
+            scale:1.25
+        });
+        gsap.to("#lens",{
+            scrollTrigger : {
+                scrub : 1
+            },
+            scale:3.0
+        });
+        gsap.to("#man",{
+            scrollTrigger : {
+                scrub : 1
+            },
+            scale:0.70
+        });
+        gsap.to("#text",{
+            scrollTrigger : {
+                scrub : 1
+            },
+            x :-500,
+            y:-100,
+            scale:5.0
+        });
+        addEventListener("mousemove", (e)=>{
+            document.getElementsByClassName("cursor")[0].style.top  = e.pageY-20+"px";
+            document.getElementsByClassName("cursor")[0].style.left = e.pageX-20+ "px";
+        })
+        
+    </script>
+</body>
+</html>
